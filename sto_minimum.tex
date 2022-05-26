@@ -1,0 +1,111 @@
+\documentclass[10pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[LY1,T1]{fontenc}
+%\usepackage{frutigernext}
+%\usepackage[lf,minionint]{MinionPro}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[nosf]{kpfonts}
+\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+}
+
+% Turn off header and footer
+\pagestyle{empty}
+
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+	{-1ex plus -.5ex minus -.2ex}%
+	{0.5ex plus .2ex}%x
+	{\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+	{-1explus -.5ex minus -.2ex}%
+	{0.5ex plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+	{-1ex plus -.5ex minus -.2ex}%
+	{1ex plus .2ex}%
+	{\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{2}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+\begin{document}
+	%\footnotesize
+	\small
+	\begin{multicols*}{3}
+		\section{Постулаты Эйнштейна}
+		\subsection{Постулат относительности}
+		\textbf{Законы природы одинаковы во всех ИСО.} Другими словами, законы природы \textbf{ковариантны} по отношению к преобразованиям координат и времени от одной инерциальной СО к другой. Это значит, что уравнения, описывающие некоторый закон природы и выраженные через координаты и время различных ИСО, имеют один и тот же вид.
+		\subsection{Постулат постоянства скорости света}
+		\textbf{Скорость света не зависит от движения источника и равнас во всех ИСО и по всем направлениям.}
+		\section{Каноническая форма уравнений Максвелла в вакууме: 4-потенциал и 4-плотность тока в 4-пространстве}
+		\begin{gather*}
+			\bar{x} = \left(x, y, z, ict\right)\\
+			\Delta \dfrac{1}{c^2}\dfrac{\partial^2}{\partial t^2}=\sum\limits_{s=1}^4\dfrac{\partial^2}{\partial x_s^2}=\Box \\
+			\bar{A} = \left(A_x, A_y, A_z, i\phi\right) \text{-четырёхпотенциал} \\ 
+			\bar{J} = \left(j_x, j_y, j_z, ic\rho\right) \text{-четырёхплотность тока} \\
+			\Box \bar{A} = -\dfrac{4\pi}{c}\bar{j}, div{\bar{A}} = 0, div{\bar{J}} = 0
+		\end{gather*}
+		\section{Интервал между мировыми координатами двух событий в ИСО. Инвариантность интервала}
+		Не
+		\section{Преобразования Лоренца}
+		\section{Световой конус и мировые линии в 4-мерном пространстве}
+		\section{Относительность одновременности двух событий}
+		\section{Собственное время объекта}
+		\section{Лоренцево сокращение длины движущегося масштаба}
+		\section{Закон сложения скоростей}
+		\section{Эффект Допплера}
+		\section{Действие и функция Лагранжа свободной материальной частицы в ИСО}
+		\section{Импульс и энергия свободной материальной частицы}
+		\section{Уравнение движения релятивистской частицы в 3-мерном пространстве}
+		\section{4-скорость и 4-импульс свободной материальной частицы}
+		\section{Ковариантная форма уравнения движения частицы в ИСО и 4-сила Минковского}
+		\section{Тензор электромагнитного поля и ковариантная форма уравнений электродинамики в вакууме}
+		\section{Форма и содержание закона преобразования полей}
+		\section{Инварианты тензора электромагнитного поля}
+		\section{4-вектор плотности силы Лоренца и его связь с тензором электромагнитного поля}
+		\section{4-вектор плотности силы Лоренца и его связь с электромагнитным тензором энергии-импульса}
+		\section{Закон сохранения энергии в электродинамике}
+		\section{Закон сохранения импульса в электродинамике}
+		\section{Действие и функция Лагранжа заряженной частицы в заданном электромагнитном поле}
+		\section{Импульс заряженной частицы в заданном электромагнитном поле}
+		\section{Энергия заряженной частицы в заданном электромагнитном поле}
+		\section{Уравнение движения заряженной частицы в заданном электромагнитном поле}
+		\section{Поле равномерно движущегося заряда}
+		\section{Потенциалы Льенара-Вихерта неравномерно движущегося заряда. Выражение для поля излучения}
+		\section{Излучение неравномерно движущегося на малой скорости заряда (формула Лармора)}
+		\section{Тормозное излучение заряда}
+		\section{Синхротронное (магнитотормозное) излучение заряда}
+		\section{Излучение Вавилова-Черенкова}
+		\section{Гипотезы теории электромагнитной массы и радиус электрона}
+		\section{Сила реакции излучения и уравнение Абрагама-Лоренца}
+	\end{multicols*}
+\end{document}
