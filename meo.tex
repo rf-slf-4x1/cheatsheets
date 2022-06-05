@@ -1,27 +1,19 @@
-\documentclass[10pt,landscape,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{tikz}
-\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
-\usepackage[nosf]{kpfonts}
-\usepackage[t1]{sourcesanspro}
-\usepackage{multicol}
-\usepackage{wrapfig}
-\usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
-\usepackage[framemethod=tikz]{mdframed}
-\usepackage{microtype}
-\usepackage{pdfpages}
-
-\let\bar\overline
-
 \include{def}
 
 \begin{document}
 	\small
 	\begin{multicols*}{5}
 		\section{Понятие субстанциальной и локальной производных}
+		$\frac{d}{dt}=\frac{\partial}{\partial t}+(\vec{v}\nabla)$ - субстанциальная \\
+		$\frac{\partial}{\partial t}$~-~локальная
+		
+		\section{Уравнение неразрывности для сжимаемой и несжимаемой жидкости}
+		$\frac{d\rho}{dt}+\rho \div(\vec{v})=0$, \\
+		$\frac{d\rho}{dt}=0$ для несжимаемой 
+		
 		\section{Уравнение Эйлера в векторной форме и в проекциях на оси в декартовой системе координат}
+		$\frac{d\vec{v}}{dt}=-\frac{\nabla p}{\rho}+\vec{f}$ \\
+		\textbf{проекция.....}
 		\section{Закон сохранения энергии идеальной жидкости}
 		\section{Поток энергии}
 		\section{Закон сохранения импульса идеальной жидкости}

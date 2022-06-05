@@ -1,3 +1,29 @@
+\documentclass[10pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[T1,T2A]{fontenc}  
+% Русская традиция начертания греческих букв
+\usepackage{upgreek} % прямые греческие ради русской традиции
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+%\usepackage[nosf]{kpfonts}
+%\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+\usepackage{amsthm,amsmath,amscd}   % Математические дополнения от AMS
+\usepackage{amsfonts,amssymb}       % Математические дополнения от AMS
+\usepackage{mathtools}              % Добавляет окружение multlined
+\usepackage{xfrac}                  % Красивые дроби
+
+%некоторые маматические команды
+\renewcommand{\div}{\operatorname{div}}
+
+\let\bar\overline
+
 \definecolor{myblue}{cmyk}{1,.72,0,.38}
 
 \def\firstcircle{(0,0) circle (1.5cm)}
