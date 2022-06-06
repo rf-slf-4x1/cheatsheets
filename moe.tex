@@ -4,7 +4,7 @@
 \fancyhead[C]{Программа минимум по курсу <<МЕХАНИКА СПЛОШНЫХ СРЕД>>}
 \fancyhead[R]{Преподаватель: С.~Н.~Гурбатов}
 
-\newcommand{\sumk}{\sum\limits_{k=1}^3v_k}
+\newcommand{\sumk}{\sum\limits_{k=1}^3}
 
 \begin{document}
 	\small
@@ -20,7 +20,7 @@
 		\section{Уравнение Эйлера в векторной форме и в проекциях на оси в декартовой системе координат.}
 		Уравнение Эйлера описывает движение идеальной жидкости\\
 		$\dfrac{d\vec{v}}{dt}=-\dfrac{\nabla p}{\rho}+\vec{f}$ \\
-		$\dfrac{\partial v_i}{\partial t}+\sumk\dfrac{\partial v_i}{\partial x_k}=-\dfrac{1}{\rho}\dfrac{\partial p}{\partial t}+f_i$
+		$\dfrac{\partial v_i}{\partial t}+\sumk v_k\dfrac{\partial v_i}{\partial x_k}=-\dfrac{1}{\rho}\dfrac{\partial p}{\partial t}+f_i$
 		
 		\section{Закон сохранения энергии идеальной жидкости. Поток энергии.}
 		$\int\limits_V\left[\dfrac{\partial}{\partial t}(\dfrac{\rho v^2}{2}+\rho\varepsilon)+\Div(\dfrac{\rho v^2}{2}+W)\vec(v)\right]dV=0$, где\\
