@@ -15,17 +15,17 @@
 		
 		\section{Уравнение неразрывности для сжимаемой и несжимаемой жидкости.}
 		$\dfrac{d\rho}{dt}+\rho \div(\vec{v})=0$, \\
-		$\dfrac{d\rho}{dt}=0$ для несжимаемой 
+		$\dfrac{d\rho}{dt}=0$ -  для несжимаемой($\div(\vec{v})=0$)
 		
 		\section{Уравнение Эйлера в векторной форме и в проекциях на оси в декартовой системе координат.}
 		$\dfrac{d\vec{v}}{dt}=-\dfrac{\nabla p}{\rho}+\vec{f}$ \\
 		$\dfrac{\partial v_i}{\partial t}+\sumk\dfrac{\partial v_i}{\partial x_k}=-\dfrac{1}{\rho}\dfrac{\partial p}{\partial t}+f_i$
 		
 		\section{Закон сохранения энергии идеальной жидкости. Поток энергии.}
-		$\int\limits_V=\left[\dfrac{\partial}{\partial t}(\dfrac{\rho v^2}{2}+\rho\varepsilon)+\div(\dfrac{\rho v^2}{2}+W)\vec(v)\right]dV=0$, где\\
+		$\int\limits_V\left[\dfrac{\partial}{\partial t}(\dfrac{\rho v^2}{2}+\rho\varepsilon)+\div(\dfrac{\rho v^2}{2}+W)\vec(v)\right]dV=0$, где\\
 		$W=\rho\varepsilon+p$ - энтальпия \\
 		или в дифференциальной форме \\
-		$\dfrac{\partial E}{\partial t}+div\vec{E}=0$, где \\
+		$\dfrac{\partial E}{\partial t}+div\vec{N}=0$, где \\
 		$E=\dfrac{\rho v^2}{2}+\rho\varepsilon$ - плотность энергии \\
 		$\vec{N}=\left[\dfrac{\rho v^2}{2}+\rho\varepsilon+p\right]\vec{v}$ - вектор плотностьи потока энергии
 		
@@ -35,8 +35,7 @@
 		$ \Pi_{ik} = p\delta_{ik}+\rho v_iv_k$ - тензор ППИ
 		
 		\section{Уравнение гидростатики.}
-		$\dfrac{d\vec{v}}{dt}=-\dfrac{\nabla p}{\rho}+\vec{f}$ - Эйлера\\
-		$\dfrac{\partial\rho}{\partial t}+\div(\rho\vec{v})=0$ \\
+		$\grad p=\rho\vec{f}$, 
 		$p=p(\rho)$
 		
 		\section{Частота Брента-Вяйсяля.}
