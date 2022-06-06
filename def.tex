@@ -18,6 +18,8 @@
 \usepackage{mathtools}              % Добавляет окружение multlined
 \usepackage{xfrac}                  % Красивые дроби
 
+\usepackage{fancyhdr} % колонтитулы
+
 %некоторые математические команды
 \renewcommand{\div}{\operatorname{div}}
 \newcommand{\grad}{\operatorname{grad}}
@@ -61,3 +63,10 @@
 
 \makeatother
 \setlength{\parindent}{0pt}
+
+%колонтитулы
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{40pt}
+\setlength{\headsep}{4pt}
+\renewcommand{\headrulewidth}{1pt}
