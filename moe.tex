@@ -27,15 +27,15 @@
 		
 		\section{Закон сохранения энергии идеальной жидкости. Поток энергии.}
 		$\int\limits_V\left[\dfrac{\partial}{\partial t}(\dfrac{\rho v^2}{2}+\rho\varepsilon)+\Div(\dfrac{\rho v^2}{2}+W)\vec{v}\right]dV=0$, где\\
-		$W=\rho\varepsilon+p$ - энтальпия, $\varepsilon$ - плотность энергии на единицу массы \\
+		$W=\rho\varepsilon+p = \int\dfrac{dp}{\rho} $ - энтальпия, $\varepsilon$ - плотность энергии на единицу массы \\
 		или в дифференциальной форме \\
 		$\dfrac{\partial E}{\partial t}+div\vec{N}=0$, где \\
 		$E=\dfrac{\rho v^2}{2}+\rho\varepsilon$ - плотность энергии \\
 		$\vec{N}=\left[\dfrac{\rho v^2}{2}+\rho\varepsilon+p\right]\vec{v}$ - вектор плотности потока энергии
 		
 		\section{Закон сохранения импульса идеальной жидкости. Тензор плотности потока импульса и его представление в декартовой системе координат.}
-		$ \dfrac{\partial}{\partial t}\int\limits_V \rho\vec{v}dV=-\oint\limits_S \left[p\vec{n}+\rho\vec{v}(\vec{v}\vec{n})\right]d\sigma$ \\
-		$ \dfrac{\partial}{\partial t}(\rho v_i)=-\sumk\dfrac{\partial \Pi_{ik}}{\partial x_k}+\rho f_i $ \\
+		$ \dfrac{\partial}{\partial t}\int\limits_V \rho\vec{v}dV=-\oint\limits_S \left[p\vec{n}+\rho\vec{v}(\vec{v}\vec{n})\right]d\sigma = 0$ \\
+		$ \dfrac{\partial}{\partial t}(\rho v_i)=-\sumk\dfrac{\partial \Pi_{ik}}{\partial x_k}$ \\
 		$ \Pi_{ik} = p\delta_{ik}+\rho v_iv_k$ - тензор ППИ
 		
 		\section{Уравнение гидростатики.}
@@ -110,9 +110,9 @@
 		Дисперсионное уравнение: \\
 		$\omega^2=gk\th{kH} = gk \frac{e^{kH}-e^{-kH}}{e^{kH}+e^{-kH}} = gk\frac{\sh kH}{\ch x}$ \\
 		В случае волн на мелкой воде:\\
-		$\omega^2=gk^2H, \quad \omega=\pm k\sqrt{gH}$,	$v_\text{ф}=\frac{\omega}{k},	v_\text{гр}=\dv{\omega}{k}$\\
+		$\omega^2=gk^2H, \omega=\pm k\sqrt{gH}$,	$v_\text{ф}=\frac{\omega}{k},v_\text{гр}=\dv{\omega}{k}$\\
 		В случае волн на глубокой воде:\\
-		$\omega=\pm\sqrt{gk}, \quad v_\text{ф}=\sqrt{\frac{g}{k}},	\qquad v_\text{гр}=\frac{g}{2\sqrt{gk}}=\frac12 v_\text{f}$\\
+		$\omega=\pm\sqrt{gk},	v_\text{ф}=\sqrt{\frac{g}{k}}, v_\text{гр}=\frac{g}{2\sqrt{gk}}=\frac12 v_\text{f}$\\
 		В случае гравитационно-капиллярных волн:\\
 		$\omega^2 = (gk+\gamma k^3)\th{kH},		\gamma = \frac{\alpha}{\rho}$\\
 		$ v_\text{ф}^2 = {\omega^2}{k^2} = {g}{k}+\gamma k$ \\
