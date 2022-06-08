@@ -39,8 +39,7 @@
 		$ \Pi_{ik} = p\delta_{ik}+\rho v_iv_k$ - тензор ППИ
 		
 		\section{Уравнение гидростатики.}
-		$\Grad p=\rho\vec{f}$,~
-		$p=p(\rho)$
+		$\Grad p=\rho\vec{f}, \quad p=p(\rho)$
 		
 		\section{Частота Брента-Вяйсяля.}
 		$N=\sqrt{\dfrac{g}{\rho}\dfrac{d\rho}{dz}}$\\
@@ -56,7 +55,7 @@
 		$\Gamma = \oint\limits_L\vec{v}d\vec{r}=const$
 		
 		\section{Потенциальные течения идеальной несжимаемой жидкости. Основные уравнения, граничные условия.}
-		$\Delta \varphi=0,~\vec{v}=\Grad(\phi)$ \\
+		$\Delta \varphi=0,\quad \vec{v}=\Grad(\phi)$ \\
 		Граничное условие не протекания: \\
 		Нормальная компонента скорости на границе с телом равна нулю.\\
 		$\vec{v}\vec{n}|_s=\dfrac{\partial\varphi}{\partial n}=\vec{v_0}\vec{n}$ \\
@@ -80,7 +79,7 @@
 		
 		\section{Функция тока и ее свойства.}
 		Для плоского потенциального течения несжимаемой идеальной жидкости: \\
-		$\psi = \psi (x, y, t)$; $v_{x}=\dfrac{\partial\psi}{\partial y}$; $v_{y}=-\dfrac{\partial\psi}{\partial x}$ \\
+		$\psi = \psi (x, y, t); \quad v_{x}=\dfrac{\partial\psi}{\partial y}; \quad v_{y}=-\dfrac{\partial\psi}{\partial x}$ \\
 		$d\psi = \dfrac{\partial\psi}{\partial x}dx + \dfrac{\partial\psi}{\partial y}dy = -v_{y}dx + v_{x}dy$\\
 		На линии тока $\psi = const$. Линии тока ортогональны линиям уровня ($(\nabla\psi, \nabla\varphi)=0$). Функция тока - является гармонической функцией, удовлетворяющей уравнению Лапласа $\Delta \psi = 0$. 
 		
@@ -104,7 +103,7 @@
 		
 		\section{Поверхностные гравитационные волны (длинные, короткие, гравитационно-капиллярные) и их основные свойства (траектории движения частиц, дисперсионные уравнения, фазовые и групповые скорости).}
 		Траектории описываются уравнением эллипса: \\
-		$\dfrac{\xi^2}{a_\xi^2}+\dfrac{\eta^2}{a_\eta^2} = 1, \quad a_\xi = \dfrac{a\ch{k(z+H)}}{\sh{kH}}	, \quad a_\eta = \dfrac{a\sh{k(z+H)}}{\sh{kH}}$ \\
+		$\dfrac{\xi^2}{a_\xi^2}+\dfrac{\eta^2}{a_\eta^2} = 1, \quad a_\xi = \dfrac{a\sh{k(z+H)}}{\sh{kH}}	, \quad a_\eta = \dfrac{a\ch{k(z+H)}}{\sh{kH}}$ \\
 		$\xi$ и $\eta$ - смещения частицы по вертикали и горизонтали соответственно\\
 		$ \xi = -\dfrac{a}{\sh{kH}}\ch{k(z+H)}\sin{(kx-\omega t)} $\\
 		$ \eta = \dfrac{a}{\sh{kH}}\sh{k(z+H)}\cos{(kx-\omega t)} $\\
@@ -113,7 +112,7 @@
 		В случае волн на мелкой воде:\\
 		$\omega^2=gk^2H, \quad \omega=\pm k\sqrt{gH}$,	$v_\text{ф}=\frac{\omega}{k},	v_\text{гр}=\dv{\omega}{k}$\\
 		В случае волн на глубокой воде:\\
-		$\omega=\pm\sqrt{gk}$,		$v_\text{ф}=\sqrt{\frac{g}{k}},	\qquad v_\text{гр}=\frac{g}{2\sqrt{gk}}=\frac12 v_\text{f}$\\
+		$\omega=\pm\sqrt{gk}, \quad v_\text{ф}=\sqrt{\frac{g}{k}},	\qquad v_\text{гр}=\frac{g}{2\sqrt{gk}}=\frac12 v_\text{f}$\\
 		В случае гравитационно-капиллярных волн:\\
 		$\omega^2 = (gk+\gamma k^3)\th{kH},		\gamma = \frac{\alpha}{\rho}$\\
 		$ v_\text{ф}^2 = {\omega^2}{k^2} = {g}{k}+\gamma k$ \\
@@ -169,9 +168,9 @@
 		
 		\section{Уравнения линейной акустики. Волновое уравнение.}
 		Уравнение Эйлера, уравнение непрерывности и последнее уравнение - состояния:\\
-		$\dfrac{\partial \vec{v}'}{\partial t} = -\dfrac{\nabla p'}{\rho_0}$,	$\dfrac{\partial \rho'}{\partial t} + \rho_0 c^2 \Div \vec{v} = 0$, 	$p' = c^2 \rho'$\\
-		Здесь $p = p_0 + p'$, $v = v_0 + v'$, $\rho  = \rho_0 + \rho'$\\
-		$p_0 >> p'$, $v_0 >> v'$, $\rho_0 >> \rho'$\\
+		$\dfrac{\partial \vec{v}'}{\partial t} = -\dfrac{\nabla p'}{\rho_0}, \quad \dfrac{\partial \rho'}{\partial t} + \rho_0 c^2 \Div \vec{v} = 0, \quad p' = c^2 \rho'$\\
+		Здесь $p = p_0 + p', \quad v = v_0 + v', \quad\rho  = \rho_0 + \rho'$\\
+		$p_0 >> p', \quad v_0 >> v', \quad \rho_0 >> \rho'$\\
 		Величины с индексом 0 равновесная среда, штрихами обозначены добавки, возникающие при распространении звука.\\
 		$M = \dfrac{v}{c} = \dfrac{p'}{p_0} = \dfrac{\rho'}{\rho_0}$ - число Маха, $M << 1$\\
 		Волновое уравнение:
