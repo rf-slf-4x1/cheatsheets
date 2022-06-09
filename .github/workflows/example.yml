@@ -1,4 +1,4 @@
-name: Build example.tex
+name: Build example
 on:
   push:
     paths: ['example.tex', 'def.tex']

@@ -1,4 +1,4 @@
-name: Build sto_minimum.tex
+name: Build STO
 on:
   push:
     paths: ['sto_minimum.tex', 'def.tex']

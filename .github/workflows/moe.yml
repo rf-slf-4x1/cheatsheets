@@ -1,4 +1,4 @@
-name: Build moe.tex
+name: Build MOE
 on:
   push:
     paths: ['moe.tex', 'def.tex']
