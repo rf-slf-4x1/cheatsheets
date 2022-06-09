@@ -24,6 +24,7 @@ jobs:
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
+          commit_message: ${{ github.event.head_commit.message }} sto_minimum.pdf
           files: sto_minimum.pdf
           remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
           access_token: ${{secrets.TOKEN}}
