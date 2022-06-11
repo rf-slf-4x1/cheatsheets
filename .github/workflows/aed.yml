@@ -1,0 +1,31 @@
+name: Build AED
+on:
+  push:
+    paths: ['aed.tex', 'def.tex']
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Build PDFs
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: aed.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: Upload
+        uses: actions/upload-artifact@master
+        with:
+          name: aed.pdf
+          path: aed.pdf
+        if: always()
+      - name: Upload to work repo
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          target_branch: main
+          commit_message: ${{ github.event.head_commit.message }}, work aed.pdf
+          files: aed.pdf
+          remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
+          access_token: ${{secrets.TOKEN}}
+          force: true
