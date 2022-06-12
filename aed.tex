@@ -24,8 +24,8 @@
 		$\Delta \vec{A}-k^2\vec{A}=0, \Delta=\frac{\partial^2}{\partial z^2}+\Delta_\perp, \Delta_\perp=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}, \frac{\partial^2}{\partial z^2}=-h^2$. \\
 		При гармонической зависимости от $t$: $\Delta \vec{A_\perp}-(k^2-h^2)\vec{A}=0$. \textbf{или каппа?} \\
 		Решение: $\vec{a}^{e,m}=\vec{z_0}\psi^{e,m}(r_\perp)e^{-ihz}$ (в отсутствии сторонних источников); \\
-		TM($ E_z=0 $): $ \Delta_\perp\psi^m+\varkappa^2\psi^m=0 $; \\
-		TE($ H_z=0 $): $ \Delta_\perp\psi^e+\varkappa^2\psi^e=0 $; \\
+		TE($ E_z=0 $): $ \Delta_\perp\psi^m+\varkappa^2\psi^m=0 $; \\
+		TM($ H_z=0 $): $ \Delta_\perp\psi^e+\varkappa^2\psi^e=0 $; \\
 		TEM($ E_z=0 $): $ \Delta_\perp\psi=0 $.\\
 		$\varkappa^2=k^2-h^2$~-~поперечное волновое число. \\
 		$\varkappa_n=\sqrt{\frac{w^2}{c^2}\mu\eps+h_n^2}, n=0,1,2,...$~-~номер моды.
@@ -53,10 +53,28 @@
 		$E_\perp=\zeta_\perp[\vec{H_\perp},\vec{z_0}]$~-~импедансная связь \\
 		Поперечный импеданс($\zeta_\perp$): \\
 		\begin{tabular}{l l l}
-			 TE & TM & TEM \\
-			 $\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}$ \\
+			TE & TM & TEM \\
+			$\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}$ \\
 		\end{tabular}
+		
 		\section{Граничные условия для полей и поперечных волновых функций $\Psi^{(e)}$ и $\Psi^{(m)}$ в линиях передачи с идеально проводящими границами. Математическая формулировка задачи отыскания собственных волн различных типов в идеальной линии.}
+		
+		$E_\tau=0, H_n=0$ - Г.~У. \\
+		\begin{tabular}{l l l}
+			TE: & TM: & TEM: \\
+			$\begin{cases}
+				\Delta_\perp\psi^m+\varkappa^2\psi^m=0 \\
+				\pdv{\psi^m}{n}|_{L}=0 \text{~-~условие Дирихле}\\
+			\end{cases}$  &
+			$\begin{cases}
+				\Delta_\perp\psi^e+\varkappa^2\psi^e=0 \\
+				\pdv{\psi^e}{n}|_{L}=0 \text{~-~условие Неймана}\\
+			\end{cases}$  &
+			$\begin{cases}
+				\Delta_\perp\psi=0 \\
+				\psi=const_i|_{L_i}\\
+			\end{cases}$ \\
+		\end{tabular}
 		
 		\section{Дисперсионное уравнение для волн в идеальных линиях. Понятие критической частоты и критической длины волны. Графики зависимости полей от продольной координаты в различные моменты времени при частотах, больших или меньших критической. Зависимости длины волны, фазовой и групповой скорости в линии передачи от частоты.}
 		
