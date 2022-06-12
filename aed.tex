@@ -7,20 +7,55 @@
 %Настройки шаблона
 \include{def}
 
+\renewcommand{\frac}{\dfrac} % большие дроби
+\newcommand{\eps}{\varepsilon}
+
 \begin{document}
 	\small
 	\begin{multicols*}{2}
 		\section{Запись функции, определяющей зависимость полей и векторных потенциалов гармонической плоской волны в линии передачи от времени $t$ и продольной координаты $z$. Понятия частоты, временного периода, продольного волнового числа, длины волны, фазовой и групповой скорости.}
-		
 		$\{\vec{E},\vec{H}\}=\{\vec{E_0},\vec{H_0}\}e^{i(wt-hz)}, ~\vec{A}^{e,m}=\vec{z_0}\psi^{e,m}(r_{\perp})e^{-ihz}$ \\
 		$\psi$~-~произвольная скалярная функция(амплитуда векторного потенциала), $(wt-hz)$~-~фаза \\
-		$\varkappa^2=k^2-h^2$~-~поперечное волновое число, $k=\frac wc\sqrt{\mu\varepsilon}$~-~волноевое число в среде, $ h $~-~ продольное волновое число. \\
+		$\varkappa^2=k^2-h^2$~-~поперечное волновое число, $k=\frac wc\sqrt{\mu\eps}$~-~волновое число в среде, $ h $~-~ продольное волновое число. \\
 		$T=\frac {2\pi}w, \lambda_\text{в}=\frac {2\pi}h, V_\text{ф}=\frac{w}{h}, V_\text{гр}=\dv{w}{h}$. Для волновода без заполнения $V_\text{ф}V_\text{гр}=c^2$. $V_\text{гр}\le c$.
 		
 		\section{Волновое уравнение для векторного потенциала в отсутствие источников при произвольной и гармонической зависимости от времени. Дифференциальное уравнение для скалярных поперечных волновых функций $\Psi^{(e),(m)}(r_\perp)$, определяющих зависимость полей в линии передачи от поперечных координат. Понятие поперечного волнового числа. }
 		
+		$\Delta \vec{A}-k^2\vec{A}=0, \Delta=\frac{\partial^2}{\partial z^2}+\Delta_\perp, \Delta_\perp=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}, \frac{\partial^2}{\partial z^2}=-h^2$. \\
+		При гармонической зависимости от $t$: $\Delta \vec{A_\perp}-(k^2-h^2)\vec{A}=0$. \textbf{или каппа?} \\
+		Решение: $\vec{a}^{e,m}=\vec{z_0}\psi^{e,m}(r_\perp)e^{-ihz}$ (в отсутствии сторонних источников); \\
+		TM($ E_z=0 $): $ \Delta_\perp\psi^m+\varkappa^2\psi^m=0 $; \\
+		TE($ H_z=0 $): $ \Delta_\perp\psi^e+\varkappa^2\psi^e=0 $; \\
+		TEM($ E_z=0 $): $ \Delta_\perp\psi=0 $.\\
+		$\varkappa^2=k^2-h^2$~-~поперечное волновое число. \\
+		$\varkappa_n=\sqrt{\frac{w^2}{c^2}\mu\eps+h_n^2}, n=0,1,2,...$~-~номер моды.
+		
 		\section{Понятие о ТЕ, ТМ и ТЕМ волнах. Импедансная связь поперечных компонент полей. Определение поперечного волнового импеданса. }
 		
+		$\{\vec{H},\vec{E}\}=\vec{z_0}\{{H_z},{E_z}\}+\{\vec{H_\perp},\vec{E_\perp}\}$ \\
+		\begin{tabular}{l l l}
+			TE($H_z=0$) & TM($E_z=0$) & TEM($E_z=H_z=0$) \\
+			$\begin{rcases}
+				E_z=\frac{\varkappa^2}{ik_0\eps\mu}\psi^e \\
+				\vec{E_\perp} = \frac{-h}{k_0\eps\mu}\nabla_\perp\psi^e \\
+				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi^e,\vec{z_0}]
+			\end{rcases} e^{i(wt-hz)}$ & 
+			$\begin{rcases}
+				H_z=\frac{\varkappa^2}{ik_0\eps\mu}\psi^m \\
+				\vec{H_\perp} = \frac{-h}{k_0\eps\mu}\nabla_\perp\psi^m \\
+				\vec{E_\perp}=\frac1{\eps}[\nabla_\perp\psi^m,\vec{z_0}]
+			\end{rcases} e^{i(wt-hz)}$ & 
+			$\begin{rcases}
+				\vec{E_\perp} =-\frac1{\sqrt{\eps\mu}}\nabla_\perp\psi \\
+				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi,\vec{z_0}]
+			\end{rcases} e^{i(wt-hz)}$ \\
+		\end{tabular}
+		$E_\perp=\zeta_\perp[\vec{H_\perp},\vec{z_0}]$~-~импедансная связь \\
+		Поперечный импеданс($\zeta_\perp$): \\
+		\begin{tabular}{l l l}
+			 TE & TM & TEM \\
+			 $\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}\frac kh$ & $\sqrt{\frac{\mu}{\eps}}$ \\
+		\end{tabular}
 		\section{Граничные условия для полей и поперечных волновых функций $\Psi^{(e)}$ и $\Psi^{(m)}$ в линиях передачи с идеально проводящими границами. Математическая формулировка задачи отыскания собственных волн различных типов в идеальной линии.}
 		
 		\section{Дисперсионное уравнение для волн в идеальных линиях. Понятие критической частоты и критической длины волны. Графики зависимости полей от продольной координаты в различные моменты времени при частотах, больших или меньших критической. Зависимости длины волны, фазовой и групповой скорости в линии передачи от частоты.}
