@@ -1,4 +1,4 @@
-# cheatsheets [![Build MOE](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/moe.yml/badge.svg)](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/moe.yml) [![Build STO](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/sto_minimum.yml/badge.svg)](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/sto_minimum.yml) [![Build AED](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/aed.yml/badge.svg)](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/aed.yml) [![Build example](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/example.yml/badge.svg)](https://github.com/rf-slf-4x1/cheatsheets/actions/workflows/example.yml)
+# cheatsheets [![Build MOE](../../actions/workflows/moe.yml/badge.svg)](../../actions/workflows/moe.yml) [![Build STO](../../actions/workflows/sto_minimum.yml/badge.svg)](../../actions/workflows/sto_minimum.yml) [![Build AED](../../actions/workflows/aed.yml/badge.svg)](../../actions/workflows/aed.yml) [![Build example](../../actions/workflows/example.yml/badge.svg)](../../actions/workflows/example.yml)
 Репозиторий со шпаргалками к предметам
 
 ## Назначение tex файлов
