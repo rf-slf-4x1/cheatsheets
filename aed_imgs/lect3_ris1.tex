@@ -15,7 +15,7 @@
 			height=6 cm,
 			% enlargelimits = true,
 			% legend pos= south east,
-			legend pos=outer north east,
+			% legend pos=outer north east,
 			ymax = 1,
 			ymin = -1,
 			% xmin = 0,
@@ -69,7 +69,7 @@
 		\addplot[thick,densely dashed,domain={-pi:pi},samples=350] {cos(deg((x+1)*5))/2};
 		\addlegendentry{$t=t_0+\delta t$}
 
-		\draw (pi/2,1/2) node [above] {$h>0:\,\, \longrightarrow$};
+		\draw (-pi/2,1/2) node [above] {$h>0:\,\, \longrightarrow$};
 		% \addplot[thick,domain={0:1},samples=100] {0};
 		% Добавляем графики на рисунок
 		% \addplot[smooth] table[x expr=\thisrow{xi}, y expr=\thisrow{E0}] {\mytable};
