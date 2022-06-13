@@ -1,7 +1,7 @@
 name: Build AED
 on:
   push:
-    paths: ['aed.tex', 'def.tex', 'aed_imgs/*.pdf']
+    paths: ['aed.tex', 'def.tex', 'aed_imgs/*.pdf', 'aed_imgs/*.png']
 jobs:
   build_latex:
     runs-on: ubuntu-latest
