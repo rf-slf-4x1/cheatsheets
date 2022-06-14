@@ -50,8 +50,8 @@
 				\vec{E_\perp}=\frac{-1}{\eps}[\nabla_\perp\psi^m,\vec{z_0}]
 			\end{rcases} e^{i(\w t-hz)}$ & 
 			$\begin{rcases}
-				\vec{E_\perp} =-\frac1{\sqrt{\eps\mu}}\nabla_\perp\psi^e \\
-				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi^e,\vec{z_0}]
+				\vec{E_\perp} =-\frac1{\sqrt{\eps\mu}}\nabla_\perp\psi \\
+				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi,\vec{z_0}]
 			\end{rcases} e^{i(\w t-hz)}$ \\
 		\end{tabular}
 		$E_\perp=\zeta_\perp[\vec{H_\perp},\vec{z_0}]$~-~импедансная связь \\
@@ -162,13 +162,13 @@
 		$Z_\text{н}=Z_\text{в} \Rightarrow \Gamma=0$ ~-~\textbf{согласование}(отсутствие отражения).
 		
 		\section{Спектр собственных частот идеального прямоугольного резонатора. Низшая мода прямоугольного резонатора (собственная частота, структура поля).}
-
+		
 		$\omega_{mnp}^2=\dfrac{c^2}{\varepsilon\mu}\qty(\qty(\dfrac{m\pi}{a})^2+\qty(\dfrac{n\pi}{b})^2+\qty(\dfrac{p\pi}{L})^2), \{m,n,p\} = (0),1,2,3,...$ \\
 		$b < a$,\quad $b < L$, где $L$ - продольный размер резонатора\\
 		Низшая мода: ${\text{TEM}}_{101} \rightarrow \omega_{101}^2 = \dfrac{c^2}{\varepsilon\mu}\qty(\qty(\dfrac{\pi}{a})^2+\qty(\dfrac{\pi}{L})^2)$
 		
 		\section{Причины затухания колебаний в реальных резонаторах. Описание затухания, обусловленного потерями энергии в заполняющей среде. График зависимости поля собственного колебания в реальном резонаторе от времени.}
-
+		
 		Основные причины затухания - это потери в среде и потери в стенках.\\
 		$\eps=\eps'+i\eps'',\quad \mu=\mu'+i\mu'',\quad \omega_\text{рез}=\omega_\text{рез}'+i\omega_\text{рез}'',\quad \Re(E_x)\sim cos(\omega't)e^{-\omega''t}$\\
 		$\begin{rcases}
@@ -182,18 +182,18 @@
 		\end{tabular}
 		
 		\section{Представление полей, создаваемых в волноводе заданными сторонними токами, в виде суперпозиции полей собственных мод (общий вид формул возбуждения волноводов).}
-
+		
 		$\vec{E} = \sum\limits_{p = 1}^{\infty} a_p\vec{E_p}, \quad \vec{H} = \sum\limits_{p = 1}^{\infty} a_p\vec{H_p}$ \quad при распространении $\longrightarrow $\\
 		$\vec{E} = \sum\limits_{p = 1}^{\infty} a_{(-p)}{\vec{E}}_{(-p)}, \quad \vec{H} = \sum\limits_{p = 1}^{\infty} a_{(-p)}\vec{H}_{(-p)}$ \quad при распространении $\longleftarrow $\\
 		$\vec{E_{p}}, \vec{H_{p}}$ - собственные моды, \quad $p$ = 1, 2, 3 - индексы мод\\
-
+		
 		$\begin{rcases}
 			a_p = \dfrac{1}{N_p} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{-p} - \vec{j}^{m}{\vec{H}}_{-p}) \,dV \\
 			a_{(-p)} = \dfrac{1}{N_{(- p)}} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{p} - \vec{j}^{m}{\vec{H}}_{p}) \,dV
 		\end{rcases} \text{коэффициенты возбуждения}, p = 1, 2, 3...$\\
 		$N_p = \pm 4\text{П}_{zp}$ - мощность волны (поток волны в положительном направлении по оси $Z$ за 1 секунду). $N_p$ - норма волны\\
 		Для $TM \rightarrow$ +, для $TE \rightarrow$ -
-
+		
 		\section{Представление полей, создаваемых в резонаторе заданными сторонними токами, в виде суперпозиции полей собственных колебаний (общий вид формул возбуждения резонатора). Резонансные свойства полей.}
 
 		$\vec{E}  = \vec{E_\text{В}}  + \vec{E_\text{П}} , \quad \vec{H}  = \vec{H_\text{В}}  + \vec{H_\text{П}} $ - сумма вихревых и потенциальных компонент\\
@@ -213,7 +213,7 @@
 			{Возбуждение штырём} & {Возбуждение петлёй} \\
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask15_1} &
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask15_2} \\
-			{штырь – электрическая деталь} & {петля – магнитный диполь} \\
+			{штырь \sim электрическая диполь} & {петля \sim магнитный диполь} \\
 			\multicolumn{2}{c}{$\vec{P}\sim e^{i\w t}$} \\
 			\multicolumn{2}{c}{Условия возбуждения:} \\
 			{$\vec{J^e} \parallel\vec{P^e}$} & {$\vec{J^m} \parallel\vec{P^m}$} \\
@@ -222,7 +222,7 @@
 		\end{tabular}
 		
 		\section{Определения дифференциального и полного сечений рассеяния тела. Выражение для амплитуды поля и плотности потока энергии рассеянной волны в дальней зоне через дифференциальное сечение рассеяния.}
-
+		
 		$\sigma_\text{диф} = \dfrac{dP}{d\Omega S_\text{пад}}$, где $S_\text{пад}$ - величина вектора Пойтнинга в падающей волне, $\Omega$ — телесный угол, $d\Omega = \dfrac{dS}{r^2}$, $\sigma_\text{диф}$ — дифференциальное сечение рассеяния — характеристика интенсивности рассеянной волны\\
 		$dP = S_\text{пад}d\sigma$ - дифференциал ???, \quad $\sigma_\text{полн} = \int_{4\pi}\sigma_\text{диф}\,d\Omega = \dfrac{P_\text{полн}}{S_\text{пад}}$, \quad $P_\text{полн} = \int_{4\pi}\dfrac{dP}{d\Omega}\,d\Omega$\\
 		\textbf{ГДЕ АМПЛИТУДА, ЧТО ТУТ ПРОИСХОДИТ}\\
