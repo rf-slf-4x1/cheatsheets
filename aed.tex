@@ -142,7 +142,7 @@
 		
 		$V=\int\limits_1^2E_ldl$ \\
 		$\pdv{Q_\text{лин}}{t}=-\pdv{I}{z}$, где $Q_\text{лин}$~-~линейный заряд на единицу длинны; $I$~-~сила тока в направлении $z$ \\
-		Главные волны можно описать с помощью телеграфных уведомлений: \\
+		Главные волны можно описать с помощью телеграфных уравнений: \\
 		$\pdv{I}{z}=-C\pdv{V}{t}$ \\
 		$\pdv{V}{z}=-\frac{1}{c^2}L\pdv{I}{t}$ \\
 		где $C=\frac{Q_\text{лин}}{V}$~-~погонная ёмкость; $L$~-~погонная индуктивность.\\
@@ -188,8 +188,8 @@
 		$\vec{E_{p}}, \vec{H_{p}}$ - собственные моды, \quad $p$ = 1, 2, 3 - индексы мод\\
 
 		$\begin{rcases}
-			a_p = \dfrac{1}{N_p} \int_{V}(\vec{j}^{e}{\vec{E}}_{-p} - \vec{j}^{m}{\vec{H}}_{-p}) \,dV \\
-			a_{(-p)} = \dfrac{1}{N_{(- p)}} \int_{V}(\vec{j}^{e}{\vec{E}}_{p} - \vec{j}^{m}{\vec{H}}_{p}) \,dV
+			a_p = \dfrac{1}{N_p} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{-p} - \vec{j}^{m}{\vec{H}}_{-p}) \,dV \\
+			a_{(-p)} = \dfrac{1}{N_{(- p)}} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{p} - \vec{j}^{m}{\vec{H}}_{p}) \,dV
 		\end{rcases} \text{коэффициенты возбуждения}, p = 1, 2, 3...$\\
 		$N_p = \pm 4\text{П}_{zp}$ - мощность волны (поток волны в положительном направлении по оси $Z$ за 1 секунду). $N_p$ - норма волны\\
 		Для $TM \rightarrow$ +, для $TE \rightarrow$ -
@@ -198,8 +198,13 @@
 
 		$E = E_\text{В} + E_\text{П}, \quad H = H_\text{В} + H_\text{П}$ - сумма вихревых и потенциальных компонент\\
 		${\vec{E}}_\text{В} = \sum\limits_{p = 1}^{\infty} e_p\vec{E_p}, \quad {\vec{H}}_\text{В} = \sum\limits_{p = 1}^{\infty} h_p\vec{H_p}$\\
-		$\vec{E_p}$ и $\vec{H_p}$ - поля собственных мод (они вихревые, т.к. нет источников: $e_p \neq h_p$)
-		\textbf{КАВО тут происходит}
+		$\vec{E_p}$ и $\vec{H_p}$ - поля собственных мод (они вихревые, т.к. нет источников) \\
+		$e_p\neq h_p$ \\
+		$\begin{rcases}
+			e_p=\frac{i}{\w^2-\w^2_p} \frac{1}{N_p}\int\limits_V(\w \vec{j}^e\vec{E_p}-\w_p \vec{j}^m\vec{H_p})dV\\
+			h_p=\frac{i}{\w^2-\w^2_p} \frac{1}{N_p}\int\limits_V(\w_p \vec{j}^e\vec{E_p}-\w \vec{j}^m\vec{H_p})dV\\
+		\end{rcases} \text{коэффициенты возбуждения}, p = 1, 2, 3...$\\
+		
 
 		\section{Способы возбуждения волноводов и резонаторов при помощи штыря и петли.}
 		
