@@ -24,8 +24,8 @@
 		
 		\section{Волновое уравнение для векторного потенциала в отсутствие источников при произвольной и гармонической зависимости от времени. Дифференциальное уравнение для скалярных поперечных волновых функций $\Psi^{(e),(m)}(r_\perp)$, определяющих зависимость полей в линии передачи от поперечных координат. Понятие поперечного волнового числа. }
 		
-		$\Delta \vec{A}-k^2\vec{A}=0, \Delta=\frac{\partial^2}{\partial z^2}+\Delta_\perp, \Delta_\perp=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}, \frac{\partial^2}{\partial z^2}=-h^2$. \\
-		При гармонической зависимости от $t$: $\Delta \vec{A_\perp}-(k^2-h^2)\vec{A}=0$.\\
+		$\Delta \vec{A}+k^2\vec{A}=0, \Delta=\frac{\partial^2}{\partial z^2}+\Delta_\perp, \Delta_\perp=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}, \frac{\partial^2}{\partial z^2}=-h^2$. \\
+		При гармонической зависимости от $t$: $\Delta \vec{A_\perp}+(k^2-h^2)\vec{A}=0$.\\
 		Решение: $\vec{a}^{e,m}=\vec{z_0}\psi^{e,m}(r_\perp)e^{-ihz}$ (в отсутствии сторонних источников); \\
 		TE($ E_z=0 $): $ \Delta_\perp\psi^m+\varkappa^2\psi^m=0 $; \\
 		TM($ H_z=0 $): $ \Delta_\perp\psi^e+\varkappa^2\psi^e=0 $; \\
@@ -47,11 +47,11 @@
 			$\begin{rcases}
 				H_z=\frac{\varkappa^2}{ik_0\eps\mu}\psi^m \\
 				\vec{H_\perp} = \frac{-h}{k_0\eps\mu}\nabla_\perp\psi^m \\
-				\vec{E_\perp}=\frac1{\eps}[\nabla_\perp\psi^m,\vec{z_0}]
+				\vec{E_\perp}=\frac{-1}{\eps}[\nabla_\perp\psi^m,\vec{z_0}]
 			\end{rcases} e^{i(\w t-hz)}$ & 
 			$\begin{rcases}
-				\vec{E_\perp} =-\frac1{\sqrt{\eps\mu}}\nabla_\perp\psi \\
-				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi,\vec{z_0}]
+				\vec{E_\perp} =-\frac1{\sqrt{\eps\mu}}\nabla_\perp\psi^e \\
+				\vec{H_\perp}=\frac1{\mu}[\nabla_\perp\psi^e,\vec{z_0}]
 			\end{rcases} e^{i(\w t-hz)}$ \\
 		\end{tabular}
 		$E_\perp=\zeta_\perp[\vec{H_\perp},\vec{z_0}]$~-~импедансная связь \\
