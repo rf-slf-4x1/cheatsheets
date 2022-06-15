@@ -197,11 +197,11 @@
 		$\vec{E} = \sum\limits_{p = 1}^{\infty} a_{(-p)}{\vec{E}}_{(-p)}, \quad \vec{H} = \sum\limits_{p = 1}^{\infty} a_{(-p)}\vec{H}_{(-p)}$ \quad при распространении $\longleftarrow $\\
 		$\vec{E_{p}}, \vec{H_{p}}$ - собственные моды, \quad $p$ = 1, 2, 3 - индексы мод\\
 		$\begin{rcases}
-			a_p = \dfrac{1}{N_p} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{(-p)} - \vec{j}^{m}{\vec{H}}_{(-p)}) \,dV \\
-			a_{(-p)} = \dfrac{1}{N_{(- p)}} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{p} - \vec{j}^{m}{\vec{H}}_{p}) \,dV
+			a_p = \dfrac{1}{N_p} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{(-p)} - \vec{j}^{m}{\vec{H}}_{(-p)}) \,dV (\text{при}~z>z_2)\\
+			a_{(-p)} = \dfrac{1}{N_{p}} \int\limits_{V}(\vec{j}^{e}{\vec{E}}_{p} - \vec{j}^{m}{\vec{H}}_{p}) \,dV (\text{при}~z<z_1)
 		\end{rcases} \text{коэффициенты возбуждения},~p = 1, 2, 3...$\\
-		$N_p = \pm 4\text{П}_{zp}$ - мощность волны (используется поток волны в положительном направлении по оси $Z$ за 1 секунду). $N_p$ - норма волны\\
-		Для $TM \rightarrow$ +, для $TE \rightarrow$ -
+		$N_p = \pm 4\text{П}_{zp}$ - мощность волны (используется полный поток энергии в положительном направлении по оси $Z$ за 1 секунду). $N_p$ - норма волны. Для $TM \rightarrow$ +, для $TE \rightarrow$\\
+		$N_p = \dfrac{c}{4\pi}\iint ({\vec{E}}_p\times {\vec{H}}_{(-p)} - {\vec{E}}_{(-p)}\times {\vec{H}}_{p}) \vec{z_0} dS$
 		
 		\section{Представление полей, создаваемых в резонаторе заданными сторонними токами, в виде суперпозиции полей собственных колебаний (общий вид формул возбуждения резонатора). Резонансные свойства полей.}
 		
