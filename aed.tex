@@ -129,7 +129,7 @@
 		\section{Причины затухания волн в линиях передачи. Описание затухания, обусловленного потерями энергии в заполняющей среде. Графики зависимости поля в линии передачи с потерями от продольной координаты в различные моменты времени.}
 		
 		Потери могут быть вызваны потерями энергии в заполняющей среде и на стенках (конечная проводимость). \\
-		$\eps=\eps'+i\eps'', \mu=\mu'+i\mu'' \Rightarrow h=h'+ih''$  - комплексные части дают потери в заполняющей среде \\
+		$\eps=\eps'+i\eps'', \mu=\mu'+i\mu'' \Rightarrow h=h'+ih''$  - комплексные части дают потери в заполняющей среде. \\
 		$\Re(E_x)\sim e^{i(\w t-hz)}=e^{h''z}e^{i(\w t-h'z)}$,\quad $\abs{h''}$~-~декремент затухания. \\
 		$h' = \sqrt{\frac{\omega^2}{c^2} \eps' - \varkappa^2}, \quad h'' = \frac{\eps'' k_{0}^2}{2 h'}\quad (\mu=1)$. \\
 		$Q = \w \dfrac{\bar{W^T}}{P_{\text{пот}}} = 2\pi \dfrac{\bar{W^T}}{T P_{\text{пот}}} = \dfrac{\w'}{2\w''}$ - добротность\\
@@ -176,13 +176,10 @@
 		\section{Причины затухания колебаний в реальных резонаторах. Описание затухания, обусловленного потерями энергии в заполняющей среде. График зависимости поля собственного колебания в реальном резонаторе от времени.}
 		
 		Основные причины затухания - это потери в среде и потери в стенках.\\
-		$\eps=\eps'+i\eps'',\quad \mu=\mu'+i\mu'',\quad \omega_\text{рез}=\omega_\text{рез}'+i\omega_\text{рез}'',\quad \Re(E_x)\sim cos(\omega't)e^{-\omega''t}$\\
-		$\begin{rcases}
-			\eps''\\
-			\mu''
-		\end{rcases} \text{обуславливают потери}$\\
-		$\w'' = \dfrac{{\text{П}_S}}{2W} = \dfrac{Re \zeta_S \oint_S |H|^2 dS}{4W}$\textbf{ПОПРАВЬ ДВОЙНОЙ}\\
-		$\omega_\text{рез} = \dfrac{\omega_\text{0 рез}}{\sqrt{\varepsilon \mu}} = \dfrac{ck_\text{рез}}{\sqrt{\varepsilon \mu}}, \quad \vec{E},\vec{H} \sim e^{i\omega_\text{рез}t} = e^{i\omega_\text{рез}'t}e^{-\omega''t}$\\
+		$\eps=\eps'+i\eps'', \mu=\mu'+i\mu'' \Rightarrow \w_\text{рез}=\w_\text{рез}'+i\w_\text{рез}''$  - комплексные части дают потери в заполняющей среде. \\
+		$\Re(E_x)\sim cos(\omega't)e^{-\w''_\text{рез}t}$,\quad $\abs{\w''_\text{рез}}$~-~декремент затухания. \\
+		$\w_\text{рез} = \dfrac{\w_\text{0 рез}}{\sqrt{\varepsilon \mu}} = \dfrac{ck_\text{рез}}{\sqrt{\varepsilon \mu}}, \quad \vec{E},\vec{H} \sim e^{i\omega_\text{рез}t} = e^{i\omega_\text{рез}'t}e^{-\omega''t}$\\
+		$\w_\text{рез}' = \sqrt{\dfrac{\w_\text{0 рез}^2}{c^2}(\varepsilon' \mu' - \varepsilon'' \mu'') - \varkappa^2}, \quad \w_\text{рез}'' = \dfrac{(\varepsilon'' \mu' + \varepsilon' \mu'')k^2_0}{2h'}$ (общий случай $\eps$ и $\mu$ - комплексные)\\
 		\begin{tabular}{l}
 			{Зависимость поля во времени в резонаторе с потерями} \\
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask12_1} \\
