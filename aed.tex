@@ -138,7 +138,6 @@
 		$\eps=\eps'+i\eps'', \mu=\mu'+i\mu'' \Rightarrow h=h'+ih''$  - комплексные части дают потери в заполняющей среде. \\
 		$E_x\sim e^{i(\w t-hz)}=e^{-h''z}e^{i(\w t-h'z)}$,\quad $\Re(E_x) \sim cos~e^{-h'' z}$, \quad $\abs{h''}$~-~декремент затухания. \\
 		$h' = \sqrt{\frac{\omega^2}{c^2} \eps' - \varkappa^2}, \quad h'' = \frac{\eps'' k_{0}^2}{2 h'}\quad (\mu=1)$. \\
-		$Q = \w \dfrac{\bar{W^T}}{P_{\text{пот}}} = 2\pi \dfrac{\bar{W^T}}{T P_{\text{пот}}} = \dfrac{\w'}{2\w''}$ - добротность\\
 		\begin{tabular}{l}
 			{Зависимость поля в линии передачи с потерями} \\
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask8_1} \\
@@ -150,7 +149,7 @@
 		$\pdv{Q_\text{лин}}{t}=-\pdv{I}{z}$, где $Q_\text{лин}$~-~линейный заряд на единицу длинны; $I$~-~сила тока в направлении $z$ \\
 		Главные волны можно описать с помощью телеграфных уравнений: \\
 		$\pdv{I}{z}=-C\pdv{V}{t}$, \quad $\pdv{V}{z}=-\frac{1}{c^2}L\pdv{I}{t}$ \\
-		где $C=\frac{Q_\text{лин}}{V}$~-~погонная ёмкость; $L$~-~погонная индуктивность.\\
+		где $C=\frac{Q_\text{лин}}{V}$~-~погонная ёмкость.\quad $L = \dfrac{\Phi_\text{лин}}{I}C$~-~погонная индуктивность.\quad $\Phi = \dfrac{LI}{c}$ - магнитный поток.\\
 		Из них можно получить волновое уравнение: \\
 		$\deriv2{V}{z}-\frac{LC}{c^2}\deriv2{V}{t}=0$,\quad $U=\frac{c}{\sqrt{LC}}$~-~скорость распространения волны. \\
 		$Z_\text{в}=\frac 1c\sqrt{\frac LC}$~-~волновое сопротивление; \quad
@@ -186,6 +185,7 @@
 		$\Re(E_x)\sim cos(\omega't)e^{-\w''_\text{рез}t}$,\quad $\abs{\w''_\text{рез}}$~-~декремент затухания. \\
 		$\w_\text{рез} = \dfrac{\w_\text{0 рез}}{\sqrt{\varepsilon \mu}} = \dfrac{ck_\text{рез}}{\sqrt{\varepsilon \mu}}, \quad \vec{E},\vec{H} \sim e^{i\omega_\text{рез}t} = e^{i\omega_\text{рез}'t}e^{-\omega''t}$\\
 		$\w_\text{рез}' = \sqrt{\dfrac{\w_\text{0 рез}^2}{c^2}(\varepsilon' \mu') - \varkappa^2}, \quad \w_\text{рез}'' = \dfrac{(\varepsilon'' \mu' + \varepsilon' \mu'')k^2_0}{2w'_\text{рез}}$ (общий случай $\eps$ и $\mu$ - комплексные)\\
+		$Q = \w \dfrac{\bar{W^T}}{P_{\text{пот}}} = 2\pi \dfrac{\bar{W^T}}{T P_{\text{пот}}} = \dfrac{\w'}{2\w''}$ - добротность\\
 		\begin{tabular}{l}
 			{Зависимость поля во времени в резонаторе с потерями} \\
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask12_1} \\
