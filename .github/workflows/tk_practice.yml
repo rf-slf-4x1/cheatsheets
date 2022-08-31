@@ -1,4 +1,4 @@
-name: Build tk_practice
+name: Build TK practice
 on:
   push:
     paths: ['tk_practice.tex', 'def.tex']
