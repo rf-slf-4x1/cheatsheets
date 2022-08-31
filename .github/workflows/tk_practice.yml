@@ -1,0 +1,31 @@
+name: Build tk_practice
+on:
+  push:
+    paths: ['tk_practice.tex', 'def.tex']
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Build PDFs
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: tk_practice.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: Upload
+        uses: actions/upload-artifact@master
+        with:
+          name: tk_practice.pdf
+          path: tk_practice.pdf
+        if: always()
+      - name: Upload to work repo
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          target_branch: main
+          commit_message: ${{ github.event.head_commit.message }}, work tk_practice.pdf
+          files: tk_practice.pdf
+          remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
+          access_token: ${{secrets.TOKEN}}
+          force: true
