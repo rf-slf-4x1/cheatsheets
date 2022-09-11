@@ -82,6 +82,12 @@
 		$\dfrac{\bar{P}}{d\tau} = \bar{F},\quad \bar{F} = (\dfrac{\vec{f}}{\sqrt{1-\beta^2}}, \dfrac{i}{c}\dfrac{(\vec{f}\vec{V})}{\sqrt{1-\beta^2}})$
 		
 		\section{Тензор электромагнитного поля и ковариантная форма уравнений электродинамики в вакууме}
+		$F = \begin{vmatrix}
+			0& B_{z}& -B_{y}& -iE_x\\
+			-B_{z}& 0& B_{x}& -iE_y\\
+			B_{y}& -B_{x}& 0& -iE_z\\
+			iE_x& iE_y& iE_z& 0 \\
+		\end{vmatrix}$ - тензор электромагнитного поля\\
 		
 		\section{Форма и содержание закона преобразования полей}
 		${\vec{B}_{\parallel}}^\prime = \vec{B}_{\parallel}, \quad {\vec{B}_{\perp}}^\prime = \dfrac{{B}_{\perp} - \dfrac{\left[\vec{V}\times \vec{E}\right]}{c}}{\sqrt{1-\beta^2}}$\\
@@ -90,12 +96,22 @@
 		\section{Инварианты тензора электромагнитного поля}
 		
 		\section{4-вектор плотности силы Лоренца и его связь с тензором электромагнитного поля}
-		$\vec{f} = \rho (\vec{E} = \dfrac{1}{c}\left[\vec{V}\vec{B}\right])$ - плотность силы Лоренца\\
+		$\vec{f} = \rho (\vec{E} + \dfrac{1}{c}\left[\vec{V}\vec{B}\right])$ - плотность силы Лоренца\\
 		$\bar{f} = (\vec{f}, \dfrac{i}{c}(\vec{f}\vec{V}))$ - 4-х вектор плотности силы Лоренца\\
 		$\bar{f} = \dfrac{1}{c}(\hat{F}\bar{j}), \quad \hat{F}$ - тензор э/м поля,\quad $f_i = \dfrac{1}{c}\sum_{k}^{}F_{ik}j_k, \quad \vec{j} = \rho \vec{V}$
 		
 		\section{4-вектор плотности силы Лоренца и его связь с электромагнитным тензором энергии-импульса}
-		
+		$T = \begin{vmatrix}
+			T_{11}& T_{12}& T_{13}& -\frac{iS_x}{c}\\
+			T_{21}& T_{22}& T_{23}& -\frac{iS_y}{c}\\
+			T_{31}& T_{32}& T_{33}& -\frac{iS_z}{c}\\
+			-\frac{iS_x}{c}& -\frac{iS_y}{c}& -\frac{iS_z}{c}& \omega \\
+		\end{vmatrix}$ - э/м тензор энергии-импульса\\
+		$S = \dfrac{1}{4\pi}\left[\vec{E}\times \vec{B}\right]$ - вектор Пойтнинга, \quad $\omega = \dfrac{1}{8\pi}(\vec{E}^2 + \vec{B}^2)$ - плотность энергии\\
+		$T_{\alpha \beta} = \dfrac{1}{4\pi}(E_\alpha E_\beta + B_\alpha B_\beta - \frac{1}{2}\delta_{\alpha \beta}(\vec{E}^2 + \vec{B}^2))$\\
+		$\bar{f} = (\vec{f}, \dfrac{i}{c}(\vec{f}, \vec{V}))$ - 4-вектор плотности силы Лоренца\\
+		$f_i = \sum_{k}^{} \dfrac{\partial T_{ik}}{\partial x_k}$ - связь с тензором
+
 		\section{Закон сохранения энергии в электродинамике}
 		$\dfrac{\partial \omega}{\partial t} + div \vec{S} + (\vec{j}E) = 0, \quad (\vec{j}E)$ - джоулевы потери\\
 		$\vec{S} = \dfrac{1}{4\pi}\left[\vec{E}\times \vec{B}\right]$ - вектор Пойтнинга,\quad $\omega = \dfrac{1}{8\pi}(\vec{E}^2 + \vec{B}^2)$ - плотность энергии
