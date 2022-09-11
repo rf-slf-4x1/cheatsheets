@@ -26,7 +26,7 @@
 		
 		\section{Интервал между мировыми координатами двух событий в ИСО. Инвариантность интервала}
 		
-		Не
+		Интервал является инвариантом по отношению к преобразованию Лоренца. Это значит, что два события, разделенные пространственно- подобным интервалом в одной ИСО, разделены пространственно-подобным интервалом такой же величины и в любой другой ИСО. Аналогично два события, разделённые времени-подобным интервалом в одной СО, разделены таким же времени-подобным интервалом в любой иной ИСО.
 		
 		\section{Преобразования Лоренца}
 		
@@ -87,13 +87,28 @@
 			-B_{z}& 0& B_{x}& -iE_y\\
 			B_{y}& -B_{x}& 0& -iE_z\\
 			iE_x& iE_y& iE_z& 0 \\
-		\end{vmatrix}$ - тензор электромагнитного поля\\
+		\end{vmatrix}$ - тензор электромагнитного поля;~~
+		$a_{kl} = \begin{vmatrix}
+			1& 0& 0& 0\\
+			0& 1& 0& 0\\
+			0& 0& \gamma & i\beta \gamma \\
+			0& 0& -i\beta \gamma& \gamma  \\
+		\end{vmatrix}$\\
+		$\sum_{k}^{} \dfrac{\partial F_{ik}}{\partial x_k} = \dfrac{4\pi}{c}j_i$, \quad $\dfrac{\partial F_{ik}}{\partial x_l} + \dfrac{\partial F_{li}}{\partial x_k} + \dfrac{\partial F_{kl}}{\partial x_i} = 0$ - уравнения Максвелла в ковариантной форме\\
+		$F_{ik} = a_{kl} a_{im} F_{lm}$
 		
 		\section{Форма и содержание закона преобразования полей}
 		${\vec{B}_{\parallel}}^\prime = \vec{B}_{\parallel}, \quad {\vec{B}_{\perp}}^\prime = \dfrac{{B}_{\perp} - \dfrac{\left[\vec{V}\times \vec{E}\right]}{c}}{\sqrt{1-\beta^2}}$\\
 		${\vec{E}_{\parallel}}^\prime = \vec{E}_{\parallel}, \quad {\vec{E}_{\perp}}^\prime = \dfrac{{\vec{E}}_{\perp} + \dfrac{1}{c}\left[\vec{V}\times \vec{B}\right]}{\sqrt{1-\beta^2}}$
 		
 		\section{Инварианты тензора электромагнитного поля}
+		1. $F_{ij}\cdot F_{ij} = inv \Rightarrow \vec{E}^2-\vec{B}^2 = inv$\\
+		2. $F_{ij}\cdot \tilde{F_{ij}}  = inv \Rightarrow (\vec{E}\cdot \vec{B}) = inv$\\
+		Следствия:\\
+		$\divideontimes$ Если в некоторой СО $E$>$B$ - выполняется в любой СО\\
+		$\divideontimes$ Если в некоторой СО $\vec{E}\perp \vec{B}$ - выполняется в любой СО\\
+		$\divideontimes$ Если в некоторой СО $(\vec{E}\cdot \vec{B})$ - то существует СО, где или $\vec{E} = 0$, или $\vec{B} = 0$\\
+		$\divideontimes$ Если в некоторой СО или $\vec{E} = 0$, или $\vec{B} = 0$ - то в любой другой $\vec{E}\perp \vec{B}$
 		
 		\section{4-вектор плотности силы Лоренца и его связь с тензором электромагнитного поля}
 		$\vec{f} = \rho (\vec{E} + \dfrac{1}{c}\left[\vec{V}\vec{B}\right])$ - плотность силы Лоренца\\
@@ -119,8 +134,8 @@
 		\section{Закон сохранения импульса в электродинамике}
 		
 		\section{Действие и функция Лагранжа заряженной частицы в заданном электромагнитном поле}
-		$dS_g = -mc^2\sqrt{1-\beta^2} dt + (q/c(\vec{A}\vec{V} - q\varphi)dt)$ - действие заряженной частицы\\
-		$L = -mc^2\sqrt{1-\beta^2} + q/c(\vec{A}\vec{V} - q\varphi)$ - функция Лагранжа
+		$dS_g = -mc^2\sqrt{1-\beta^2} dt + (q/c(\vec{A}\vec{V}) - q\varphi)dt$ - действие заряженной частицы\\
+		$L = -mc^2\sqrt{1-\beta^2} + q/c(\vec{A}\vec{V}) - q\varphi$ - функция Лагранжа
 		
 		\section{Импульс заряженной частицы в заданном электромагнитном поле}
 		$\vec{\mathsf{P}_q} = (\dfrac{\partial L}{\partial V_q}) = \dfrac{m_0\vec{V}}{\sqrt{1-\beta^2}} + \dfrac{q}{c}\vec{A}$ - обобщенный импульс\\
