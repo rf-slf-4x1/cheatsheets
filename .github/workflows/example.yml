@@ -7,7 +7,7 @@ env:
 
 on:
   push:
-    paths: ['${{env.tex_input_file}}.tex', 'def.tex']
+    paths: ['example.tex', 'def.tex']
 
 jobs:
   build_latex:
