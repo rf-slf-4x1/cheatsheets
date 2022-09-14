@@ -1,18 +1,9 @@
 name: Build example
 
 env:
-  tex_input_file:
-    description: Building tex file without extension
-    required: true
-    default: 'example'
-  pdfs_repository:
-    description: PDF saving repository
-    required: true
-    default: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
-  TOKEN:
-    description: GIHUB token
-    required: true
-    default: ${{secrets.TOKEN}}
+  tex_input_file: 'example'
+  pdfs_repository: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
+  TOKEN: ${{secrets.TOKEN}}
 
 on:
   push:
