@@ -1,6 +1,6 @@
 name: Build example
 
-inputs:
+env:
   tex_input_file:
     description: Building tex file without extension
     required: true
@@ -27,21 +27,21 @@ jobs:
       - name: Build PDFs
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{inputs.tex_input_file}}.tex
+          root_file: ${{tex_input_file}}.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: Upload
         uses: actions/upload-artifact@master
         with:
-          name: ${{inputs.tex_input_file}}.pdf
-          path: ${{inputs.tex_input_file}}.pdf
+          name: ${{tex_input_file}}.pdf
+          path: ${{tex_input_file}}.pdf
         if: always()
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
-          commit_message: ${{ github.event.head_commit.message }}, work ${{inputs.tex_input_file}}
-          files: ${{inputs.tex_input_file}}.pdf
-          remote_repository: ${{inputs.pdfs_repository}}
-          access_token: ${{inputs.TOKEN}}
+          commit_message: ${{ github.event.head_commit.message }}, work ${{tex_input_file}}
+          files: ${{tex_input_file}}.pdf
+          remote_repository: ${{pdfs_repository}}
+          access_token: ${{TOKEN}}
           force: true
