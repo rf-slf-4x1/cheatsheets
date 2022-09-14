@@ -1,7 +1,14 @@
-name: Build STO
+name: Build STO minimum
+
+env:
+  tex_input_file: 'sto_minimum'
+  pdfs_repository: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
+  TOKEN: ${{secrets.TOKEN}}
+
 on:
   push:
     paths: ['sto_minimum.tex', 'def.tex']
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -11,21 +18,21 @@ jobs:
       - name: Build PDFs
         uses: dante-ev/latex-action@latest
         with:
-          root_file: sto_minimum.tex
+          root_file: ${{env.tex_input_file}}.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: Upload
         uses: actions/upload-artifact@master
         with:
-          name: sto_minimum.pdf
-          path: sto_minimum.pdf
+          name: ${{env.tex_input_file}}.pdf
+          path: ${{env.tex_input_file}}.pdf
         if: always()
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
-          commit_message: ${{ github.event.head_commit.message }}, work sto_minimum.pdf
-          files: sto_minimum.pdf
-          remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
-          access_token: ${{secrets.TOKEN}}
+          commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
+          files: ${{env.tex_input_file}}.pdf
+          remote_repository: ${{env.pdfs_repository}}
+          access_token: ${{env.TOKEN}}
           force: true

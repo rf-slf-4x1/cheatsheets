@@ -1,7 +1,14 @@
 name: Build AED
+
+env:
+  tex_input_file: 'aed'
+  pdfs_repository: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
+  TOKEN: ${{secrets.TOKEN}}
+
 on:
   push:
-    paths: ['aed.tex', 'def.tex', 'aed_imgs/*.pdf', 'aed_imgs/*.png']
+    paths: ['aed.tex', 'def.tex']
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -11,21 +18,21 @@ jobs:
       - name: Build PDFs
         uses: dante-ev/latex-action@latest
         with:
-          root_file: aed.tex
+          root_file: ${{env.tex_input_file}}.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: Upload
         uses: actions/upload-artifact@master
         with:
-          name: aed.pdf
-          path: aed.pdf
+          name: ${{env.tex_input_file}}.pdf
+          path: ${{env.tex_input_file}}.pdf
         if: always()
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
-          commit_message: ${{ github.event.head_commit.message }}, work aed.pdf
-          files: aed.pdf
-          remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
-          access_token: ${{secrets.TOKEN}}
+          commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
+          files: ${{env.tex_input_file}}.pdf
+          remote_repository: ${{env.pdfs_repository}}
+          access_token: ${{env.TOKEN}}
           force: true
