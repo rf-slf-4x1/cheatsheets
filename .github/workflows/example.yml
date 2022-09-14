@@ -16,7 +16,7 @@ inputs:
 
 on:
   push:
-    paths: [${{inputs.tex_input_file}}.tex, 'def.tex']
+    paths: ['${{inputs.tex_input_file}}.tex', 'def.tex']
 
 jobs:
   build_latex:
