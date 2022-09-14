@@ -7,7 +7,7 @@ env:
 
 on:
   push:
-    paths: ['aed.tex', 'def.tex']
+    paths: ['aed.tex', 'def.tex', 'aed_imgs/*']
 
 jobs:
   build_latex:

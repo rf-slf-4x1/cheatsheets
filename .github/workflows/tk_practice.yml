@@ -7,7 +7,7 @@ env:
 
 on:
   push:
-    paths: ['tk_practice.tex', 'def.tex']
+    paths: ['tk_practice.tex', 'def.tex', 'tk_practice_img/*']
 
 jobs:
   build_latex:
