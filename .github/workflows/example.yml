@@ -1,7 +1,23 @@
 name: Build example
+
+inputs:
+  tex_input_file:
+    description: Building tex file without extension
+    required: true
+    default: 'example'
+  pdfs_repository:
+    description: PDF saving repository
+    required: true
+    default: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
+  TOKEN:
+    description: GIHUB token
+    required: true
+    default: ${{secrets.TOKEN}}
+
 on:
   push:
-    paths: ['example.tex', 'def.tex']
+    paths: [${{inputs.tex_input_file}}.tex, 'def.tex']
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -11,21 +27,21 @@ jobs:
       - name: Build PDFs
         uses: dante-ev/latex-action@latest
         with:
-          root_file: example.tex
+          root_file: ${{inputs.tex_input_file}}.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: Upload
         uses: actions/upload-artifact@master
         with:
-          name: example.pdf
-          path: example.pdf
+          name: ${{inputs.tex_input_file}}.pdf
+          path: ${{inputs.tex_input_file}}.pdf
         if: always()
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
-          commit_message: ${{ github.event.head_commit.message }}, work example.pdf
-          files: example.pdf
-          remote_repository: https://github.com/rf-slf-4x1/cheatsheets-pdf
-          access_token: ${{secrets.TOKEN}}
+          commit_message: ${{ github.event.head_commit.message }}, work ${{inputs.tex_input_file}}
+          files: ${{inputs.tex_input_file}}.pdf
+          remote_repository: ${{inputs.pdfs_repository}}
+          access_token: ${{inputs.TOKEN}}
           force: true
