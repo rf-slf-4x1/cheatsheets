@@ -18,21 +18,21 @@ jobs:
       - name: Build PDFs
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{tex_input_file}}.tex
+          root_file: ${{env.tex_input_file}}.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: Upload
         uses: actions/upload-artifact@master
         with:
-          name: ${{tex_input_file}}.pdf
-          path: ${{tex_input_file}}.pdf
+          name: ${{env.tex_input_file}}.pdf
+          path: ${{env.tex_input_file}}.pdf
         if: always()
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
-          commit_message: ${{ github.event.head_commit.message }}, work ${{tex_input_file}}
-          files: ${{tex_input_file}}.pdf
-          remote_repository: ${{pdfs_repository}}
-          access_token: ${{TOKEN}}
+          commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
+          files: ${{env.tex_input_file}}.pdf
+          remote_repository: ${{env.pdfs_repository}}
+          access_token: ${{env.TOKEN}}
           force: true
