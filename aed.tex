@@ -26,7 +26,7 @@
 		\section{Волновое уравнение для векторного потенциала в отсутствие источников при произвольной и гармонической зависимости от времени. Дифференциальное уравнение для скалярных поперечных волновых функций $\psi^{(e),(m)}(r_\perp)$, определяющих зависимость полей в линии передачи от поперечных координат. Понятие поперечного волнового числа. }
 		
 		$\Delta \vec{A}+k^2\vec{A}=0, \quad \Delta=\frac{\partial^2}{\partial z^2}+\Delta_\perp,\quad \Delta_\perp=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2},\quad \frac{\partial^2}{\partial z^2}=-h^2$. \\
-		При гармонической зависимости от $t$: $\Delta \vec{A_\perp}+(k^2-h^2)\vec{A}=0$.\\
+		При гармонической зависимости от $t$: $\Delta\vec{A}-\dfrac{\varepsilon\mu}{c^2}\dfrac{\partial^2\vec{A}}{\partialt^2}=0$.\\
 		Решение: $\vec{A}^{e,m}=\vec{z_0}\psi^{e,m}(r_\perp)e^{i(\w t-hz)}$ (в отсутствии сторонних источников); \\
 		TE ($ E_z=0 $): $ \Delta_\perp\psi^m+\varkappa^2\psi^m=0 $; \\
 		TM ($ H_z=0 $): $ \Delta_\perp\psi^e+\varkappa^2\psi^e=0 $; \\
@@ -151,7 +151,7 @@
 		$\pdv{I}{z}=-C\pdv{V}{t}$, \quad $\pdv{V}{z}=-\frac{1}{c^2}L\pdv{I}{t}$ \\
 		где $C=\frac{Q_\text{лин}}{V}$~-~погонная ёмкость.\quad $L = \dfrac{\Phi_\text{лин}}{I}c$~-~погонная индуктивность.\quad $\Phi = \dfrac{LI}{c}$ - магнитный поток.\\
 		Из них можно получить волновое уравнение: \\
-		$\deriv2{V}{z}-\frac{LC}{c^2}\deriv2{V}{t}=0$,\quad $U=\frac{c}{\sqrt{LC}}$~-~скорость распространения волны. \\
+		$\deriv2{{I,V}}{z}-\frac{LC}{c^2}\deriv2{{I,V}}{t}=0$,\quad $U=\frac{c}{\sqrt{LC}}$~-~скорость распространения волны. \\
 		$Z_\text{в}=\frac 1c\sqrt{\frac LC}$~-~волновое сопротивление; \quad
 		$Z_\text{н}=\frac{V_\text{н}}{I_\text{н}}$~-~импеданс нагрузки; \\
 		$Z(z)=\frac{V(z)}{I(z)}$~-~комплексный импеданс линии передачи; \\
@@ -171,7 +171,7 @@
 		$\omega_{mnp}^2=\dfrac{c^2}{\varepsilon\mu}\qty(\qty(\dfrac{m\pi}{a})^2+\qty(\dfrac{n\pi}{b})^2+\qty(\dfrac{p\pi}{L})^2),\quad \{m,n,p\} = (0),1,2,3,...$ \\
 		Мода это собственное колебание, характеризующееся собственной частотой и своей структурой поля.\\
 		В прямоугольном резонаторе: $b < a$,~$b < L$, где $L$ - продольный размер резонатора $\Rightarrow m = 1, n = 0, p = 1$ - низшая мода\\
-		Низшая мода: ${\text{TEM}}_{101} \rightarrow \omega_{101}^2 = \dfrac{c^2}{\varepsilon\mu}\qty(\qty(\dfrac{\pi}{a})^2+\qty(\dfrac{\pi}{L})^2)$ \\
+		Низшая мода: ${\text{TE}}_{101} \rightarrow \omega_{101}^2 = \dfrac{c^2}{\varepsilon\mu}\qty(\qty(\dfrac{\pi}{a})^2+\qty(\dfrac{\pi}{L})^2)$ \\
 		\begin{tabular}{l l l}
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask11_1} &
 			\includegraphics[width=0.25\linewidth]{aed_imgs/ask11_2} &
