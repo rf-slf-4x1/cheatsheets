@@ -10,9 +10,9 @@ on:
     paths: ['aed.tex', 'def.tex', 'aed_imgs/*']
 
 jobs:
-  build_latex:
+  prepare:
     runs-on: ubuntu-latest
-    steps:
+      steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
         with:
@@ -27,12 +27,22 @@ jobs:
             git diff HEAD^..HEAD ${{env.tex_input_file}}.tex > diff.diff
       - name: Apply diff
         run:  git apply -R diff.diff
+    
+  build:
+    runs-on: ubuntu-latest
+    needs: prepare
+      steps:
       - name: Run latexdiff
         run: latexdiff -t CTRADITIONAL ${{env.tex_input_file}}.tex ${{env.tex_input_file}}_new.tex > ${{env.tex_input_file}}_diff.tex
       - name: Build PDF
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_new.tex
       - name: Build diff PDF
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_diff.tex
+    
+  upload:
+    runs-on: ubuntu-latest
+    needs: build
+      steps:
       - name: Renaming pdf
         run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
       - name: Upload to work repo
