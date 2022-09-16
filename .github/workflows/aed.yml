@@ -40,8 +40,9 @@ jobs:
           name: ${{env.tex_input_file}}.pdf
           path: ${{env.tex_input_file}}_diff.pdf
         if: always()
-      - name: Upload to work repo
+      - name: Renaming pdf
         run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
+      - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
