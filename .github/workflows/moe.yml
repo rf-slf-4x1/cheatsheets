@@ -12,7 +12,7 @@ on:
 jobs:
   prepare:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
         with:
@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: prepare
-      steps:
+    steps:
       - name: Run latexdiff
         run: latexdiff -t CTRADITIONAL ${{env.tex_input_file}}.tex ${{env.tex_input_file}}_new.tex > ${{env.tex_input_file}}_diff.tex
       - name: Build PDF
@@ -42,7 +42,7 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     needs: build
-      steps:
+    steps:
       - name: Renaming pdf
         run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
       - name: Upload to work repo
