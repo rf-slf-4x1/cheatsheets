@@ -26,7 +26,7 @@ jobs:
             git fetch origin main
             git diff HEAD^..HEAD ${{env.tex_input_file}}.tex > diff.diff
       - name: Apply diff
-        run:  git apply -R diff.diff
+        run:  git apply -R diff.diff --allow-empty
     
   build:
     runs-on: ubuntu-latest
