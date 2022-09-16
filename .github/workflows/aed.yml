@@ -15,14 +15,16 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
       - name: Install latex
-        run: sudo apt-get install latexdiff texlive-latex-base
+        run: sudo apt-get install latexdiff texlive-latex-base texlive-science texlive-lang-cyrillic cm-super
       - name: Prepare tex
         run:  cp ${{env.tex_input_file}}.tex ${{env.tex_input_file}}_new.tex
       - name: Prepare diff
         run: |
             git fetch origin main
-            git diff HEAD~1 ${{env.tex_input_file}}.tex > diff.diff
+            git diff HEAD^..HEAD ${{env.tex_input_file}}.tex > diff.diff
       - name: Apply diff
         run:  git apply -R diff.diff
       - name: Run latexdiff
@@ -44,7 +46,7 @@ jobs:
         with:
           target_branch: main
           commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
-          files: ${{env.tex_input_file}}.pdf
+          files: ${{env.tex_input_file}}.pdf ${{env.tex_input_file}}_diff.pdf
           remote_repository: ${{env.pdfs_repository}}
           access_token: ${{env.TOKEN}}
           force: true
