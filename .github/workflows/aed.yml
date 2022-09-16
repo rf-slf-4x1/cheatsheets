@@ -16,7 +16,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 2
+          fetch-depth: 50
       - name: Install latex
         run: sudo apt-get install latexdiff texlive-latex-base texlive-science texlive-lang-cyrillic cm-super
       - name: Prepare tex file
@@ -24,7 +24,7 @@ jobs:
       - name: Prepare diff
         run: |
             git fetch origin main
-            git diff HEAD^..HEAD ${{env.tex_input_file}}.tex > diff.diff
+            git diff HEAD 'HEAD@{1day}' ${{env.tex_input_file}}.tex > diff.diff
       - name: Apply diff
         run:  git apply -R diff.diff --allow-empty
       - name: Run latexdiff
