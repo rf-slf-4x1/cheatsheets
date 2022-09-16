@@ -24,7 +24,7 @@ jobs:
       - name: Prepare diff
         run: |
             git fetch origin main
-            git whatchanged --since="1 day" --patch ${{env.tex_input_file}}.tex > diff.diff
+            git diff HEAD^^^^^ HEAD ${{env.tex_input_file}}.tex > diff.diff
       - name: Apply diff
         run:  git apply -R diff.diff --allow-empty
       - name: Run latexdiff
