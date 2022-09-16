@@ -10,29 +10,37 @@ on:
     paths: ['tk_practice.tex', 'def.tex', 'tk_practice_img/*']
 
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Build PDFs
-        uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{env.tex_input_file}}.tex
-          compiler: pdflatex
-          args: -interaction=nonstopmode -shell-escape
-      - name: Upload
-        uses: actions/upload-artifact@master
-        with:
-          name: ${{env.tex_input_file}}.pdf
-          path: ${{env.tex_input_file}}.pdf
-        if: always()
+          fetch-depth: 2
+      - name: Install latex
+        run: sudo apt-get install latexdiff texlive-latex-base texlive-science texlive-lang-cyrillic cm-super
+      - name: Prepare tex file
+        run:  cp ${{env.tex_input_file}}.tex ${{env.tex_input_file}}_new.tex
+      - name: Prepare diff
+        run: |
+            git fetch origin main
+            git diff HEAD^..HEAD ${{env.tex_input_file}}.tex > diff.diff
+      - name: Apply diff
+        run:  git apply -R diff.diff --allow-empty
+      - name: Run latexdiff
+        run: latexdiff -t CTRADITIONAL ${{env.tex_input_file}}.tex ${{env.tex_input_file}}_new.tex > ${{env.tex_input_file}}_diff.tex
+      - name: Build PDF
+        run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_new.tex
+      - name: Build diff PDF
+        run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_diff.tex
+      - name: Renaming pdf
+        run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
       - name: Upload to work repo
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           target_branch: main
           commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
-          files: ${{env.tex_input_file}}.pdf
+          files: ${{env.tex_input_file}}.pdf ${{env.tex_input_file}}_diff.pdf
           remote_repository: ${{env.pdfs_repository}}
           access_token: ${{env.TOKEN}}
           force: true
