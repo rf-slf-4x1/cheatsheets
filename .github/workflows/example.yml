@@ -10,18 +10,13 @@ on:
     paths: ['example.tex', 'def.tex']
 
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
-  
-  build:
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
       - name: Install latex
         run: sudo apt-get install latexdiff texlive-latex-base texlive-science texlive-lang-cyrillic cm-super
       - name: Prepare tex file
@@ -38,11 +33,6 @@ jobs:
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_new.tex
       - name: Build diff PDF
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_diff.tex
-    
-  upload:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Renaming pdf
         run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
       - name: Upload to work repo
