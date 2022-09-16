@@ -33,12 +33,6 @@ jobs:
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_new.tex
       - name: Build diff PDF
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}_diff.tex
-      - name: Upload
-        uses: actions/upload-artifact@master
-        with:
-          name: ${{env.tex_input_file}}.pdf
-          path: ${{env.tex_input_file}}_diff.pdf
-        if: always()
       - name: Renaming pdf
         run: mv ${{env.tex_input_file}}_new.pdf ${{env.tex_input_file}}.pdf
       - name: Upload to work repo
