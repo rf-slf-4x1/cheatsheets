@@ -1,4 +1,4 @@
-name: Build TK practice
+name: Build TK
 
 env:
   tex_input_file: 'tk'
