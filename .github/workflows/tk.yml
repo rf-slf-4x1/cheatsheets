@@ -16,6 +16,8 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Install latex
+        run: sudo apt-get update
+        run: sudo apt-get upgrade 
         run: sudo apt-get install latexdiff texlive-latex-base texlive-science texlive-lang-cyrillic cm-super
       - name: Build PDF
         run: pdflatex -interaction=nonstopmode -shell-escape ${{env.tex_input_file}}.tex
