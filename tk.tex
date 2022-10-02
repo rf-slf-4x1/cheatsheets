@@ -92,7 +92,7 @@
 		$\divideontimes$ Затухающий апериодический процесс ($\delta > 0, \delta^2 > \omega_0^2$):\\
 		$\lambda_{1,2} = -\delta \pm \sqrt{\delta^2 - \omega_0^2}$, состояние равновесия - устойчивый узел\\
 		$\divideontimes$ Отрицательное затухание ($\delta<0$): энергия растет во времени, состояние равновесия - неустойчивый фокус при $\delta^2<\omega_0^2$ или неустойчивый узел при $\delta^2\geqslant \omega_0^2$
-
+		
 		\section{Резонанс в линейном осцилляторе}
 		Резонанс — неограниченное возрастание амплитуды вынужденных колебаний, когда частота внешней силы близка к собственной частоте, линейного осциллятора. Вынужденные колебания – это колебания, возникающие в результате действия на систему  внешнего (силового) воздействия. Характерной особенностью вынужденных  колебаний является то, что их свойства зависят не только от параметров системы, но и от параметров внешней силы.\\
 		$\begin{cases}
@@ -120,9 +120,9 @@
 		Связь характеристик: $\lambda = \dfrac{1}{T_0}ln(S)$ \\
 		% Для предельных циклов существует отображение Пуанкаре: \\
 		% \begin{tabular}{c | c}
-		% 	{\includegraphics[width=0.45\linewidth]{tk_img/predel_1.png}} & {\includegraphics[width=0.45\linewidth]{tk_img/predel_2.png}} \\
-		% 	{$\gamma > 0$} & {$\gamma < 0$}
-		% \end{tabular}
+			% 	{\includegraphics[width=0.45\linewidth]{tk_img/predel_1.png}} & {\includegraphics[width=0.45\linewidth]{tk_img/predel_2.png}} \\
+			% 	{$\gamma > 0$} & {$\gamma < 0$}
+			% \end{tabular}
 		
 		
 		\section{Автоколебания и автоколебательная система. Мягкий и жесткий режимы возбуждения}
@@ -195,7 +195,67 @@
 		\end{tabular}
 		
 		\section{Локальные бифуркации состояний равновесия трехмерных систем}
-		
+		\begin{enumerate} 
+			\item $\lambda_{1,2,3} - \Re,\ \lambda_1=0,\ \lambda_{2,3}<0$ \\
+			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_1.png}} \\
+				\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
+				$O_1$ - устойчивый узел & $O$ - седло-узел с устойчивой узловой  \\
+				$O_2$ - седло & областью и неустойчивой седло-узловой
+			\end{tabular*}
+			
+			\item $\lambda_{1,2,3} - \Re,\ \lambda_1=0,\ \lambda_{2,3}>0$ \\
+			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_2.png}} \\
+				\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
+				$O_1$ - седло & $O$ - седло-узел  \\
+				$O_2$ - неустойчивый узел & 
+			\end{tabular*}
+			
+			\item $\lambda_{1,2,3} - \Re,\ \lambda_1=0,\ \lambda_{2}>0,\ \lambda_{3}<0$ \\
+			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_3.png}} \\
+				\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
+				$O_{1,2}$ - седла & $O$ - ?
+			\end{tabular*}
+			
+			\item $\lambda_{1=0},\ \lambda_{2,3}=\alpha(\mu)\pm i\beta(\mu)$ \\
+			\begin{enumerate}
+				\item $\alpha(\mu)<0$ \\
+				\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+					\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_4_1.png}} \\
+					\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
+					$O_{1}$ - устойчивый фокус & при $\mu>0$ \textbf{?точка?} исчезает \\
+					$O_{2}$ - седло-фокус
+				\end{tabular*}
+				
+				\item $\alpha(\mu)>0$ \\
+				\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+					\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_4_2.png}} \\
+					\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
+					$O_{1}$ - седло-фокус & при $\mu>0$ равновесие исчезает \\
+					$O_{2}$ - устойчивый фокус
+				\end{tabular*}
+			\end{enumerate}
+			
+			\item Бифуркация Андронова Хопфа \\
+			$L(\mu)<0$ - суперкритическая бифуркация \\
+			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_5.png}} \\
+				\multicolumn{1}{c}{$\mu=0$} & \multicolumn{1}{c}{$\mu>0$} \\
+				$O$ - устойчивый фокус(устойчивый может быть) & $L^S$ - устойчивый предельный цикл \\
+				(устойчивый может быть) 
+			\end{tabular*}
+			
+			\item Субкритическая бифуркация \\
+			$L(\mu)>0$ - первая Ляпуновская величина \\
+			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
+				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_6.png}} \\
+				\multicolumn{1}{c}{$\mu=0$} & \multicolumn{1}{c}{$\mu>0$} \\
+				$O$ - седловой предельный цикл & $O$ - седлофокус
+			\end{tabular*}
+			
+		\end{enumerate}
 		\section{Локальные бифуркации периодических движений трехмерных систем}
 		
 	\end{multicols*}
