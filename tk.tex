@@ -223,14 +223,16 @@
 		В ходе решения задачи мы переходим от двумерной системы к двум одномерным системам, что намного упрощает анализ  исходной системы
 		
 		\section{Локальные бифуркации состояний равновесия трехмерных систем}
-		\begin{enumerate} 
+		\begin{enumerate}
+
 			\item $\lambda_{1,2,3} - \Re,\ \lambda_1=0,\ \lambda_{2,3}<0$ \\
-			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
-				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_1.png}} \\               
-				\multicolumn{1}{c}{$\mu<0$} & \multicolumn{1}{c}{$\mu=0$} \\
-				$O_1$ - устойчивый узел & $O$ - седло-узел с устойчивой узловой  \\
-				$O_2$ - седло & областью и неустойчивой седло-узловой
-			\end{tabular*}
+			\begin{tabular}{cr}
+				\multicolumn{2}{c}{\includegraphics[width=0.9\linewidth]{tk_img/14_1.png}} \\
+				$\mu<0$,~ $O_1$ - устойчивый узел, $O_2$ - седло &
+				\begin{tabular}{c}
+					$\mu>0$,~ $O$ - седло-узел с устойчивой узловой\\ и неустойчивой седло-узловой областями\\
+				\end{tabular}
+			\end{tabular}\\
 			
 			\item $\lambda_{1,2,3} - \Re,\ \lambda_1=0,\ \lambda_{2,3}>0$ \\
 			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
@@ -247,7 +249,7 @@
 				$O_{1,2}$ - седла & $O$ - ?
 			\end{tabular*}
 			
-			\item $\lambda_{1=0},\ \lambda_{2,3}=\alpha(\mu)\pm i\beta(\mu)$ \\
+			\item $\lambda_{1}=0,\ \lambda_{2,3}=\alpha(\mu)\pm i\beta(\mu)$ \\
 			\begin{enumerate}
 				\item $\alpha(\mu)<0$ \\
 				\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
@@ -269,25 +271,26 @@
 			
 			\item Бифуркация Андронова Хопфа \\
 			$L(\mu)<0$ - суперкритическая бифуркация \\
-			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}ll}
-				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_5.png}} \\
-				\multicolumn{1}{c}{$\mu=0$} & \multicolumn{1}{c}{$\mu>0$} \\
-				$O$ - устойчивый фокус(устойчивый может быть) & $L^S$ - устойчивый предельный цикл \\
-				(устойчивый может быть) 
-			\end{tabular*}
 
 			\begin{tabular}{cr}
 				\multicolumn{2}{c}{\includegraphics[width=0.9\linewidth]{tk_img/14_5.png}} \\
-				$\mu=0$,\quad $O$ - устойчивый фокус & $\mu>0$,\quad $L^S$ - устойчивый предельный цикл\\
-			\end{tabular}
+				$\mu<0$,\quad $O$ - устойчивый фокус & $\mu>0$,\quad $L^S$ - устойчивый предельный цикл\\
+			\end{tabular}\\
+			\begin{center}
+				При $\mu=0$ - сложный фокус
+			\end{center}
+
 			
 			\item Субкритическая бифуркация \\
 			$L(\mu)>0$ - первая Ляпуновская величина \\
-			\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}cc}
-				\multicolumn{2}{l}{\includegraphics[width=0.9\linewidth]{tk_img/14_6.png}} \\
-				\multicolumn{1}{c}{$\mu=0$} & \multicolumn{1}{c}{$\mu>0$} \\
-				$O$ - седловой предельный цикл & $O$ - седлофокус
-			\end{tabular*}
+
+			\begin{tabular}{cr}
+				\multicolumn{2}{c}{\includegraphics[width=0.9\linewidth]{tk_img/14_6.png}} \\
+				$\mu<0$,\quad $O$ - седловой предельный цикл & $\mu>0$,\quad $O$ - седлофокус\\
+			\end{tabular}\\
+			\begin{center}
+				При $\mu=0$ - сложный седлофокус
+			\end{center}
 			
 		\end{enumerate}
 		\section{Локальные бифуркации периодических движений трехмерных систем}
