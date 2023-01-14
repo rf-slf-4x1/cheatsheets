@@ -11,5 +11,6 @@
 * tk_practice - Методы решений задач по Теории колебаний (не доведено до используемого состояния) [![Build TK practice](../../actions/workflows/tk_practice.yml/badge.svg)](../../actions/workflows/tk_practice.yml)
 * pp - Полупроводниковая электроника [![Build semiconductor electronics](../../actions/workflows/pp.yml/badge.svg)](../../actions/workflows/pp.yml)
 * td - Теория минимум по термоджинамике [![Build Thermodynamics](../../actions/workflows/td.yml/badge.svg)](../../actions/workflows/td.yml)
+* stat - Основные понятия по статистической радиофизике [![Build stat](../../actions/workflows/stat.yml/badge.svg)](../../actions/workflows/stat.yml)
 
 ## PDF лежат в [этом](https://github.com/rf-slf-4x1/cheatsheets-pdf) репозитории.
