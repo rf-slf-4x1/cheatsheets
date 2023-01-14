@@ -1,4 +1,4 @@
-name: Build example
+name: Build stat
 
 env:
   tex_input_file: 'stat'
