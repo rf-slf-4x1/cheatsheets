@@ -3,7 +3,7 @@ name: Build manul
 env:
   tex_input_file: 'manul'
   pdfs_repository: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
-  TOKEN: ${secrets.TOKEN}
+  TOKEN: ${{secrets.TOKEN}}
 
 on:
   push:
