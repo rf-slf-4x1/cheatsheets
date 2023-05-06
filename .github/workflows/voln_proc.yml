@@ -1,13 +1,13 @@
-name: Build manul
+name: Build voln_proc
 
 env:
-  tex_input_file: 'manul'
+  tex_input_file: 'voln_proc'
   pdfs_repository: 'https://github.com/rf-slf-4x1/cheatsheets-pdf'
   TOKEN: ${{secrets.TOKEN}}
 
 on:
   push:
-    paths: ['manul.tex', 'def.tex']
+    paths: ['voln_proc.tex', 'def.tex']
 
 jobs:
   build:
