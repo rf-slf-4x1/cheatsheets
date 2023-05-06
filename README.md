@@ -12,5 +12,6 @@
 * pp - Полупроводниковая электроника [![Build semiconductor electronics](../../actions/workflows/pp.yml/badge.svg)](../../actions/workflows/pp.yml)
 * td - Теория минимум по термоджинамике [![Build Thermodynamics](../../actions/workflows/td.yml/badge.svg)](../../actions/workflows/td.yml)
 * stat - Основные понятия по статистической радиофизике [![Build stat](../../actions/workflows/stat.yml/badge.svg)](../../actions/workflows/stat.yml)
+* voln_proc - Программа минимум по курсу Физика волновых процессов [![Build voln_proc](../../actions/workflows/voln_proc.yml/badge.svg)](../../actions/workflows/voln_proc.yml)
 
 ## PDF лежат в [этом](https://github.com/rf-slf-4x1/cheatsheets-pdf) репозитории.
