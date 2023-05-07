@@ -7,6 +7,8 @@
 %Настройки шаблона
 \include{def}
 
+\newcommand{\rot}{\operatorname{rot}}
+
 \begin{document}
 	\small
 	\begin{multicols*}{2}
@@ -52,10 +54,29 @@
 		$\mu$ и $K$ - переобозначения модулей упругости Юнга и Пуассона
 
 		\section{Уравнения Максвелла в дифференциальной и интегральной формах}
-		из ПЭД взять ...
+        \begin{tabular}{c|lcl|}
+            {} & {Дифференциальная форма} & {} & {Интегральная форма} \\
+            {1} & {$\rot\vec{E}=-\dfrac1c\dfrac{\partial{\vec{B}}}{\partial{t}}$} & {$\Rightarrow$} & { $\oint\limits_L\vec{E}\dd\vec{L}=-\dfrac1c\dfrac\dd{\dd{t}}\int\limits_S\vec{B}\dd{\vec{S}}$} \\
+
+            {2} & {$\rot\vec{H} = \dfrac{4\pi}{c}\vec{j} + \dfrac1c\dfrac{\partial{\vec{D}}}{\partial{t}}$} & {$\Rightarrow$} & {$\oint\limits_L\vec{H}\dd\vec{L} = \dfrac{4\pi}{c}I+\dfrac1c\dfrac\dd{\dd{t}}\int\limits_S\vec{D}\dd{\vec{S}}$} \\
+
+            {3} & {$\Div\vec{D}=4\pi \rho$} & {$\Rightarrow$} & {$\oint\limits_S\vec{D}\dd{\vec{s}}=4\pi Q$} \\
+
+            {4} & {$\Div\vec{B}=0$} & {$\Rightarrow$} & {$\oint\limits_S\vec{B}\dd{\vec{s}}=0$}
+         \end{tabular}
+         \begin{enumerate}
+             \item {Вихревое электрическое поле поражается переменным магнитным полем.}
+             \item {Вихревое магнитное поле порождается токами проводимости и переменным электрическим полем.}
+             \item {Потенциальное электрическое поле порождается электрическими зарядами.}
+             \item {Магнитное поле имеет чисто вихревой характер и не имеет сосредоточенных зарядов как источников поля.}
+         \end{enumerate}
 
 		\section{Граничные условия для векторов ЭМ поля}
-		хуета ...
+        Для нормали из среды 1 в среду 2: \\
+		$\left[\vec{n}_{12}\times(\vec E_1-\vec E_2)\right]=0$ \\
+        $\left(\vec{n}_{12}\cdot(\vec B_1-\vec B_2)\right)=0$ \\
+        $\left[\vec{n}_{12}\times(\vec H_1-\vec H_2)\right]=\dfrac{4\pi}{c}\vec j_{\text{пов}}$ \\
+        $\left(\vec{n}_{12}\cdot(\vec D_1-\vec D_2)\right)=4\pi\vec \rho_{\text{пов}}$
 
 		\section{Вектор Пойнтинга. Плотность энергии ЭМ поля в вакууме}
 		$\dfrac{\partial W}{\partial t} + div \vec{S} = - (\vec{j}  \vec{E})$ - теорема Пойнтинга\\
