@@ -28,5 +28,5 @@ jobs:
           commit_message: ${{ github.event.head_commit.message }}, work ${{env.tex_input_file}}
           files: ${{env.tex_input_file}}.pdf
           remote_repository: ${{env.pdfs_repository}}
-          access_token: ${{ github.token }}
+          access_token: ${{env.TOKEN}}
           force: true
